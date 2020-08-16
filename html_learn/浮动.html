@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nofloat {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            display:inline-block;
+            margin-bottom: 20px;
+        }
+        .left,.right {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+        .right {
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <h2>多个块级元素纵向排列找标准流，多个块级元素横向排列找浮动</h2>
+    <div class="nofloat">1</div>
+    <div class="nofloat">2</div>
+    <div class="nofloat">3</div>
+    <br>
+    <div class="left">
+        左浮动
+    </div>
+    <div class="right">
+        右浮动
+    </div>
+    <h2>wpwpwpdkkdsadfklsdjfkljfkl</h2>
+</body>
+</html>

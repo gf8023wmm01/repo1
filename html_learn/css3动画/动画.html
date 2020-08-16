@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* from to 等价于0%  100% */
+        @keyframes move {
+            from {
+                transform: translateX(0px);
+            }
+            to {
+                transform: translateX(1000px);
+            }
+        }
+        .box {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* animation-name: move;
+            animation-duration: 2s; */
+            /* 播放次数，infinite无限循环 */
+            /* animation-iteration-count: infinite; */
+            /* 是否下一周期反方向 默认normal，alternate跑马灯*/
+            /* animation-direction: alternate; */
+            /* 动画结束后的状态，默认是backwards回到起始状态；停在结束状态 */
+            /* animation-fill-mode: forwards; */
+            /* 简写animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: move 2s linear 0s 5 alternate forwards;
+        }
+        .box:hover {
+            /* 规定动画是运行还是停止，默认为running */
+            animation-play-state: paused;
+        }
+        .box1 {
+            float: left;
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box">
+    </div>
+    <div class="box1">
+        <img src="./动画属性.png" alt="">
+        <img src="./动画简写.png" alt="">
+    </div>
+</body>
+</html>

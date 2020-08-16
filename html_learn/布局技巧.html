@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding:0;
+            margin: 0;
+        }
+        ul li{
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            border: 1px solid red;
+            list-style: none;
+            margin-left: -1px;
+            margin-bottom: -1px;
+            position: relative;
+        }
+        ul li:hover {
+            
+            border: 1px solid blue;
+            /* 第一种情况是在盒子没有定位情况下，使用相对定位 */
+            /* position: relative; */
+            /* 第二种情况，如果都有定位，使用z-index提高定位,ul li 必须加相对定位 */
+            z-index: 1;
+        }
+        .around {
+            width: 800px;
+            height: 500px;
+            background-color: green;
+        }
+        .pic {
+            float: left;
+            width: 1600;
+            height: 600;
+            margin-right: 10px;
+        }
+        .pic img {
+            width: 100%;
+        }
+        .box {
+            text-align: center;
+        }
+        .box a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: #f7f7f7;
+            border: 1px solid #ccc;
+            text-align: center;
+            line-height: 36px;
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+        }
+        .box .prev,.box .next {
+            width: 85px;
+        }
+        .box a:hover {
+            color: green;
+            background-color: #fff;
+            border: 0px;
+        }
+        .box input {
+            height: 36px;
+            width: 45px;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+        .box button {
+            height: 36px;
+            width: 45px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            outline: none;
+        }
+    </style>
+</head>
+<body>
+    <div style="overflow: hidden;">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+        </ul>
+    </div>
+    <div class="around">
+        
+        <div class="pic">
+            <img src="阴影.png" alt="">
+        </div>
+        文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕，文字环绕。
+    </div>
+    <div class="box">
+        <a href="#" class="prev">&lt;&lt;上一页</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        <a href="#">7</a>
+        <a href="#">8</a>
+        <a href="#" class="next">下一页&gt;&gt;</a>
+        到第
+        <input type="text">
+        页
+        <button>确定</button>
+    </div>
+</body>
+</html>

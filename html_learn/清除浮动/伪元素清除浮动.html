@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 500px;
+            border: 1px solid blue;
+            background-color: pink;
+            margin: 10px auto;
+        }
+        .float1 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: green;
+        }
+        .float2 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: red;
+        }
+        .box1 {
+            width: 500px;
+            height: 200px;
+            background-color: yellow;
+            margin: 0 auto;
+        }
+        /* 只对盒子后面的浮动进行闭合 */
+        /* .box::after {
+            content: '';
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        } */
+
+        /* 上面浮动的升级版，前后闭合 */
+        .box::before,.box::after {
+            content: "";
+            display: table;
+        }
+        .box::after {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <img src="伪元素清除浮动.png" alt="">
+    <div class="box">
+        <div class="float1"></div>
+        <div class="float2"></div>
+    </div>
+    <div class="box1"></div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+                @font-face {
+  font-family: 'iconfont';
+  src: url('./font/iconfont.eot');
+  src: url('./font/iconfont.eot?#iefix') format('embedded-opentype'),
+      url('./font/iconfont.woff2') format('woff2'),
+      url('./font/iconfont.woff') format('woff'),
+      url('./font/iconfont.ttf') format('truetype'),
+      url('./font/iconfont.svg#iconfont') format('svg');
+}
+        .wei {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+        .wei::before {
+            content: "前面";
+            width: 50px;
+            height: 50px;
+            background-color: purple;
+            display: inline-block;
+        }
+        .wei::after {
+            content: "后面";
+        }
+        .xia {
+            width: 200px;
+            height: 50px;
+            border: 1px solid red;
+        }
+        .xia::after {
+            font-family: 'iconfont';
+            content: "\ea8b";
+        }
+    </style>
+</head>
+<body>
+    <div class="wei">
+        中间
+    </div>
+    <div class="xia">
+
+    </div>
+</body>
+</html>

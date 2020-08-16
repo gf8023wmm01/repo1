@@ -1,0 +1,30 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14559483",
+      "name": "器皿06",
+      "font_class": "qimin06",
+      "unicode": "ea8b",
+      "unicode_decimal": 60043
+    },
+    {
+      "icon_id": "14559484",
+      "name": "器皿07",
+      "font_class": "qimin07",
+      "unicode": "ea8c",
+      "unicode_decimal": 60044
+    },
+    {
+      "icon_id": "14559485",
+      "name": "器皿08",
+      "font_class": "qimin08",
+      "unicode": "ea8d",
+      "unicode_decimal": 60045
+    }
+  ]
+}
